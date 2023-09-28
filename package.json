@@ -8,6 +8,7 @@
     "start": "next start",
     "test": "jest",
     "lint": "next lint",
+    "lint:css": "stylelint '**/*.module.css' --fix",
     "lint:fix": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json,css}' && next lint --fix",
     "typecheck": "tsc",
     "prepare": "husky install"
@@ -31,7 +32,10 @@
     "lint-staged": "^14.0.1",
     "postcss": "latest",
     "prettier": "^3.0.3",
-    "tailwindcss": "^3.3.3",
+    "reset-css": "^5.0.2",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.3",
     "typescript": "latest"
   }
 }

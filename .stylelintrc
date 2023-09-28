@@ -1,0 +1,13 @@
+{
+	"extends": "stylelint-config-standard",
+	"plugins": [
+		"stylelint-order"
+	],
+	"rules": {
+		"color-no-hex": true,
+		"font-family-name-quotes": "always-where-recommended",
+		"length-zero-no-unit": null,
+		"number-leading-zero": null,
+		"order/properties-alphabetical-order": true
+	}
+}

@@ -1,0 +1,20 @@
+.header {
+  padding-block: 1rem;
+}
+
+.title {
+  display: flex;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.link {
+  align-items: center;
+  display: flex;
+  gap: 0.5em;
+  transition: opacity var(--transition-duration) var(--transition-timing-function);
+}
+
+.link:hover {
+  opacity: var(--hover-opacity);
+}

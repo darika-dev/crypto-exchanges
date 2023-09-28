@@ -9,4 +9,5 @@ module.exports = {
   "*.{js,jsx,ts,tsx}": [buildEslintCommand],
   "*.{js,jsx,ts,tsx,md,css}": "prettier --write",
   "*.{ts,tsx}": () => "npm run typecheck",
+  "**/*.module.css": "npm run lint:css",
 }

@@ -4,24 +4,28 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { Container } from '@/components/Container/Container'
+
+import styles from './Header.module.css';
+
 interface HeaderProps {
   metadata: Metadata
 }
 
 const Header: FC<HeaderProps> = ({ metadata }) => {
   return (
-    <header className="py-5 border-b border-gray-300">
-      <div className="container">
-        <h1 className="flex">
+    <header className={styles.header}>
+      <Container>
+        <h1 className={styles.title}>
           <Link
             href="/"
-            className="flex gap-x-2 items-center text-gray-900 hover:text-gray-600 transition"
+            className={styles.link}
           >
             <Image alt="Coin Gecko Logo" src="/images/coingecko-logo.svg" height={30} width={30} />
             <span>{metadata.title ? `${metadata.title}` : ''}</span>
           </Link>
         </h1>
-      </div>
+      </Container>
     </header>
   )
 }
