@@ -1,9 +1,11 @@
+import fetchMock from 'jest-fetch-mock'
+
 import { mockExchangeItem } from '../../../mocks/exchangesItem'
 import { mockExchangesList } from '../../../mocks/exchangesList'
 import { getExchangesList, getExchangeItem } from '../CoingeckoService'
 
 beforeEach(() => {
-  fetch.resetMocks()
+  fetchMock.resetMocks()
 })
 
 describe('CoingeckoService', () => {
@@ -11,10 +13,11 @@ describe('CoingeckoService', () => {
   const mockParams = { per_page: '10', page: '1' }
   const mockExchangeId = 'binance'
 
-  it('should fetch exchange list successfully', async () => {
+  test('should fetch exchange list successfully', async () => {
     const mockResponse = mockExchangesList
 
-    fetch.mockResolvedValueOnce({
+    // @ts-expect-error
+    fetchMock.mockResolvedValueOnce({
       status: 200,
       json: async () => mockResponse,
     })
@@ -24,7 +27,7 @@ describe('CoingeckoService', () => {
   })
 
   it('should handle fetch errors', async () => {
-    fetch.mockRejectedValueOnce(new Error('Fetch error'))
+    fetchMock.mockRejectedValueOnce(new Error('Fetch error'))
 
     const exchangeItem = await getExchangesList(mockParams)
     expect(exchangeItem).toBeNull()
@@ -33,7 +36,8 @@ describe('CoingeckoService', () => {
   it('should fetch exchange item successfully', async () => {
     const mockResponse = mockExchangeItem
 
-    fetch.mockResolvedValueOnce({
+    // @ts-expect-error
+    fetchMock.mockResolvedValueOnce({
       status: 200,
       json: async () => mockResponse,
     })
@@ -44,7 +48,7 @@ describe('CoingeckoService', () => {
   })
 
   it('should handle fetch errors', async () => {
-    fetch.mockRejectedValueOnce(new Error('Fetch error'))
+    fetchMock.mockRejectedValueOnce(new Error('Fetch error'))
 
     const exchangeItem = await getExchangeItem(mockExchangeId)
 

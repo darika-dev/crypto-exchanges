@@ -1,19 +1,18 @@
-import { FC, ReactNode } from 'react'
+import { PropsWithChildren, FC, MouseEvent } from 'react'
 
 import styles from './ExternalLink.module.css'
 
 interface ExternalLinkProps {
   href: string
-  children: ReactNode
-  onClick?: () => void
   variant?: 'title' | 'default'
+  onClick?: (event: MouseEvent<HTMLElement>) => void
 }
 
-export const ExternalLink: FC<ExternalLinkProps> = ({
+export const ExternalLink: FC<PropsWithChildren<ExternalLinkProps>> = ({
   href,
   children,
-  onClick,
   variant = 'default',
+  ...linkProps
 }) => {
   return (
     <a
@@ -22,7 +21,7 @@ export const ExternalLink: FC<ExternalLinkProps> = ({
         variant === 'default' && styles.default
       }`}
       target="_blank"
-      onClick={onClick}
+      {...linkProps}
     >
       <span>{children}</span>
     </a>

@@ -21,6 +21,7 @@ const customJestConfig = {
     },
   },
   testEnvironment: 'jsdom',
+  transform: { "^.+\.tsx?$": "ts-jest" },
 };
 
 module.exports = createJestConfig(customJestConfig);
