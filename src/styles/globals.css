@@ -6,6 +6,9 @@
   --primary: #4dde6d;
   --secondary: #ff3a3a;
 
+  --rounded: 0.75rem;
+  --small-text: 0.875rem;
+
   --hover-opacity: 0.8;
   --transition-duration: 0.2s;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

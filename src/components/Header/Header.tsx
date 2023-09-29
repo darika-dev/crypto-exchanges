@@ -12,7 +12,7 @@ interface HeaderProps {
   metadata: Metadata
 }
 
-const Header: FC<HeaderProps> = ({ metadata }) => {
+export const Header: FC<HeaderProps> = ({ metadata }) => {
   return (
     <header className={styles.header}>
       <Container>
@@ -26,5 +26,3 @@ const Header: FC<HeaderProps> = ({ metadata }) => {
     </header>
   )
 }
-
-export { Header }

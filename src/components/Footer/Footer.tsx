@@ -10,7 +10,7 @@ interface FooterProps {
   metadata: Metadata
 }
 
-const Footer: FC<FooterProps> = ({ metadata }) => {
+export const Footer: FC<FooterProps> = ({ metadata }) => {
   return (
     <footer className={styles.footer}>
       <Container>
@@ -24,5 +24,3 @@ const Footer: FC<FooterProps> = ({ metadata }) => {
     </footer>
   )
 }
-
-export { Footer }

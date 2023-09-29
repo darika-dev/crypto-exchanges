@@ -4,6 +4,7 @@ import { getExchangesList } from '@/services/CoingeckoService/CoingeckoService'
 import { ExchangeListItem } from '@/services/CoingeckoService/CoingeckoService.types'
 
 import styles from './ExchangesList.module.css'
+import { ExchangesListItem } from './ExchangesListItem'
 
 export const ExchangesList = () => {
   const exchanges: ExchangeListItem[] | null = use(
@@ -12,7 +13,10 @@ export const ExchangesList = () => {
       per_page: '10',
     }),
   )
-  console.log('exchanges', exchanges)
 
-  return <div className={styles.list}></div>
+  return (
+    <table className={styles.table}>
+      <tbody>{exchanges?.map((item) => <ExchangesListItem key={item.id} exchange={item} />)}</tbody>
+    </table>
+  )
 }

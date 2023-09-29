@@ -1,0 +1,22 @@
+.link {
+  color: var(--text-mute);
+  font-size: var(--small-text);
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  white-space: nowrap;
+}
+
+.link::after {
+  content: '↗';
+  display: inline-block;
+  font-size: 0.875em;
+  margin-left: 0.25em;
+  transition: transform var(--transition-duration) var(--transition-timing-function);
+}
+
+.link:hover {
+  color: var(--primary);
+}
+
+.link:hover::after {
+  transform: translate(0.15em, -0.15em);
+}

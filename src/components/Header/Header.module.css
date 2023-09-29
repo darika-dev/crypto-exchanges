@@ -6,6 +6,7 @@
   display: flex;
   font-size: 1rem;
   font-weight: normal;
+  justify-content: center;
 }
 
 .link {
