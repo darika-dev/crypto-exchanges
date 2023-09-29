@@ -34,7 +34,7 @@
   margin-right: 0.25em;
 }
 
-@media (width >= 768px) {
+@media (width >= 500px) {
   .info {
     display: flex;
     justify-content: space-between;

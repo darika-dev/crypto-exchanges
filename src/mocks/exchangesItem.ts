@@ -1,0 +1,27 @@
+import { Exchange } from '@/services/CoingeckoService/CoingeckoService.types'
+
+export const mockExchangeItem: Exchange = {
+  name: 'Binance',
+  year_established: 2017,
+  country: 'Cayman Islands',
+  description: '',
+  url: 'https://www.binance.com/',
+  image: 'https://assets.coingecko.com/markets/images/52/small/binance.jpg?1519353250',
+  facebook_url: 'https://www.facebook.com/binanceexchange',
+  reddit_url: 'https://www.reddit.com/r/binance/',
+  telegram_url: '',
+  slack_url: '',
+  other_url_1: 'https://medium.com/binanceexchange',
+  other_url_2: 'https://steemit.com/@binanceexchange',
+  twitter_handle: 'binance',
+  has_trading_incentive: false,
+  centralized: true,
+  public_notice: '',
+  alert_notice: '',
+  trust_score: 10,
+  trust_score_rank: 1,
+  trade_volume_24h_btc: 238475.92295044573,
+  trade_volume_24h_btc_normalized: 167423.78225776533,
+  tickers: [],
+  status_updates: [],
+}
