@@ -5,6 +5,7 @@ import React, { FC, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 
 import { ExternalLink } from '@/components/Link/ExternalLink'
+import { InternalLink } from '@/components/Link/InternalLink'
 import { ExchangeListItem } from '@/services/CoingeckoService/CoingeckoService.types'
 
 import styles from './ExchangesList.module.css'
@@ -33,7 +34,7 @@ export const ExchangesListItem: FC<ExchangesListItemProps> = ({ exchange }) => {
         <img src={exchange.image} alt={exchange.name} className={styles.logo} />
       </td>
       <td className={`${styles.td} ${styles.full}`}>
-        <div>{exchange.name}</div>
+        <div><InternalLink href={`/exchange/${exchange.id}`}>{exchange.name}</InternalLink></div>
         <div className={styles.country}>{exchange.country}</div>
       </td>
       <td className={`${styles.td} ${styles.full}`}>

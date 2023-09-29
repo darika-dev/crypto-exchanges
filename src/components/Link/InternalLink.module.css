@@ -1,0 +1,7 @@
+.link {
+  transition: color var(--transition-duration) var(--transition-timing-function);
+}
+
+.link:hover {
+  color: var(--primary);
+}
