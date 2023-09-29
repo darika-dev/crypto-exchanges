@@ -19,6 +19,7 @@
     "react-dom": "latest"
   },
   "devDependencies": {
+    "@iconscout/react-unicons": "^2.0.2",
     "@types/jest": "^29.5.5",
     "@types/node": "latest",
     "@types/react": "latest",

@@ -1,0 +1,51 @@
+.box {
+  display: flex;
+  gap: 1rem;
+}
+
+.logo {
+  border-radius: 100%;
+  flex-shrink: 0;
+  height: 2.5rem;
+  overflow: hidden;
+  width: 2.5rem;
+}
+
+.description {
+  color: var(--text-mute);
+  font-size: var(--small-text);
+  margin-top: 0.5rem;
+}
+
+.points {
+  color: var(--text-mute);
+  display: flex;
+  font-size: var(--small-text);
+}
+
+.points > *:not(:last-child)::after {
+  content: '|';
+  display: inline-block;
+  margin-inline: 0.5em;
+}
+
+.trust {
+  color: var(--primary);
+  margin-right: 0.25em;
+}
+
+@media (width >= 768px) {
+  .info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (width >= 62rem) {
+  .wrapper {
+    background: var(--background-light);
+    border-radius: var(--rounded);
+    padding: 1.5rem;
+  }
+}

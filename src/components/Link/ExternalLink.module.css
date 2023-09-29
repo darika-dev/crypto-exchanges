@@ -1,6 +1,4 @@
 .link {
-  color: var(--text-mute);
-  font-size: var(--small-text);
   transition: color var(--transition-duration) var(--transition-timing-function);
   white-space: nowrap;
 }
@@ -19,4 +17,13 @@
 
 .link:hover::after {
   transform: translate(0.15em, -0.15em);
+}
+
+.default {
+  color: var(--text-mute);
+  font-size: var(--small-text);
+}
+
+.title {
+  color: var(--text);
 }

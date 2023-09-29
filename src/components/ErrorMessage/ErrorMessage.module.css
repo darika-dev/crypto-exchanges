@@ -1,0 +1,8 @@
+.wrapper {
+  background: var(--background-light);
+  border-radius: var(--rounded);
+  color: var(--secondary);
+  font-size: var(--small-text);
+  padding: 1.5rem;
+  text-align: center;
+}

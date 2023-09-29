@@ -7,7 +7,7 @@ import { Wrapper } from '@/components/Wrapper/Wrapper'
 import 'reset-css'
 import '../styles/globals.css'
 
-const title = 'Cryptocurrency exchanges'
+const title = 'Crypto exchanges'
 const description =
   'Cryptocurrency Exchange Directory utilizing Typescript, Next.js, React, CSS Modules and Coingecko API, tested using Cypress and Jest.'
 

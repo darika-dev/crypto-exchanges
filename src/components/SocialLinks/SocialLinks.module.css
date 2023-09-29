@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.link {
+  fill: var(--text);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+}
+
+.link:hover {
+  fill: var(--primary);
+}
+
+@media (width >= 768px) {
+  .wrapper {
+    margin-top: 0;
+  }
+}

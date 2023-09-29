@@ -15,8 +15,12 @@ export const ExchangesList = () => {
   )
 
   return (
-    <table className={styles.table}>
-      <tbody>{exchanges?.map((item) => <ExchangesListItem key={item.id} exchange={item} />)}</tbody>
-    </table>
+    <div className={styles.wrapper}>
+      <table className={styles.table}>
+        <tbody>
+          {exchanges?.map((item) => <ExchangesListItem key={item.id} exchange={item} />)}
+        </tbody>
+      </table>
+    </div>
   )
 }

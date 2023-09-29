@@ -1,5 +1,8 @@
+.wrapper {
+  margin-inline: -1em;
+}
+
 .table {
-  border-collapse: separate;
   width: 100%;
 }
 
