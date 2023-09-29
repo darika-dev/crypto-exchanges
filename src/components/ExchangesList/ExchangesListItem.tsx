@@ -31,10 +31,19 @@ export const ExchangesListItem: FC<ExchangesListItemProps> = ({ exchange }) => {
     <tr className={styles.row} onClick={() => router.push(`/exchange/${exchange.id}`)}>
       <td className={styles.td}>{exchange.trust_score_rank}</td>
       <td className={styles.td}>
-        <img src={exchange.image} alt={exchange.name} className={styles.logo} />
+        <img
+          src={exchange.image}
+          alt={exchange.name}
+          className={styles.logo}
+          data-testid="exchange-logo"
+        />
       </td>
       <td className={`${styles.td} ${styles.full}`}>
-        <div><InternalLink href={`/exchange/${exchange.id}`}>{exchange.name}</InternalLink></div>
+        <div>
+          <InternalLink href={`/exchange/${exchange.id}`} data-testid="exchange-name">
+            {exchange.name}
+          </InternalLink>
+        </div>
         <div className={styles.country}>{exchange.country}</div>
       </td>
       <td className={`${styles.td} ${styles.full}`}>
@@ -43,6 +52,7 @@ export const ExchangesListItem: FC<ExchangesListItemProps> = ({ exchange }) => {
           onClick={(event) => {
             stopPropagation(event)
           }}
+          data-testid="exchange-link"
         >
           {readableUrl}
         </ExternalLink>

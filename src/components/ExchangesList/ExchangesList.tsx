@@ -1,5 +1,6 @@
 import { use } from 'react'
 
+import { ErrorMessage } from '@/components/ErrorMessage/ErrorMessage'
 import { getExchangesList } from '@/services/CoingeckoService/CoingeckoService'
 import { ExchangeListItem } from '@/services/CoingeckoService/CoingeckoService.types'
 
@@ -13,6 +14,10 @@ export const ExchangesList = () => {
       per_page: '10',
     }),
   )
+
+  if (!exchanges) {
+    return <ErrorMessage />
+  }
 
   return (
     <div className={styles.wrapper}>
