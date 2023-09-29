@@ -4,12 +4,12 @@ import { Footer } from '@/components/Footer/Footer'
 import { Header } from '@/components/Header/Header'
 import { Wrapper } from '@/components/Wrapper/Wrapper'
 
-import 'reset-css';
-import '../styles/globals.css';
+import 'reset-css'
+import '../styles/globals.css'
 
-const title = 'Cryptocurrency exchanges';
+const title = 'Cryptocurrency exchanges'
 const description =
-  'Cryptocurrency Exchange Directory utilizing Typescript, Next.js, React, CSS Modules and Coingecko API, tested using Cypress and Jest.';
+  'Cryptocurrency Exchange Directory utilizing Typescript, Next.js, React, CSS Modules and Coingecko API, tested using Cypress and Jest.'
 
 export const metadata: Metadata = {
   title,

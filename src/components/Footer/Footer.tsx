@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 
 import { Container } from '@/components/Container/Container'
 
-import styles from './Footer.module.css';
+import styles from './Footer.module.css'
 
 interface FooterProps {
   metadata: Metadata
