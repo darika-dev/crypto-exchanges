@@ -16,7 +16,6 @@ export const metadata: Metadata = {
   description,
   themeColor: '#ffffff',
   robots: 'index',
-  manifest: '/site.webmanifest',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/shortcut-icon.png',
