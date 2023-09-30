@@ -22,8 +22,13 @@ export const ExchangeDetails: FC<ExchangeDetailsProps> = ({ id }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.box}>
-        <img src={exchange.image} alt={exchange.name} className={styles.logo} />
-        <div className={styles.info}>
+        <img
+          src={exchange.image}
+          alt={exchange.name}
+          className={styles.logo}
+          data-testid="exchange-logo"
+        />
+        <div className={styles.info} data-testid="exchange-info">
           <div>
             <ExternalLink href={exchange.url} variant="title">
               {exchange.name}
@@ -38,7 +43,7 @@ export const ExchangeDetails: FC<ExchangeDetailsProps> = ({ id }) => {
             </div>
           </div>
           <div>
-            <SocialLinks exchange={exchange} />
+            <SocialLinks exchange={exchange} data-testid="exchange-social-links" />
           </div>
         </div>
       </div>

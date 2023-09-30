@@ -21,7 +21,7 @@ export const ExchangesList = () => {
 
   return (
     <div className={styles.wrapper}>
-      <table className={styles.table}>
+      <table className={styles.table} data-testid="exchange-table">
         <tbody>
           {exchanges?.map((item) => <ExchangesListItem key={item.id} exchange={item} />)}
         </tbody>

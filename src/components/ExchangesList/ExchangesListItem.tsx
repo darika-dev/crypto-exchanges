@@ -28,8 +28,14 @@ export const ExchangesListItem: FC<ExchangesListItemProps> = ({ exchange }) => {
   }
 
   return (
-    <tr className={styles.row} onClick={() => router.push(`/exchange/${exchange.id}`)}>
-      <td className={styles.td}>{exchange.trust_score_rank}</td>
+    <tr
+      className={styles.row}
+      onClick={() => router.push(`/exchange/${exchange.id}`)}
+      data-testid="exchange-item"
+    >
+      <td className={styles.td} data-testid="exchange-trust-score-rank">
+        {exchange.trust_score_rank}
+      </td>
       <td className={styles.td}>
         <img
           src={exchange.image}
@@ -44,7 +50,9 @@ export const ExchangesListItem: FC<ExchangesListItemProps> = ({ exchange }) => {
             {exchange.name}
           </InternalLink>
         </div>
-        <div className={styles.country}>{exchange.country}</div>
+        <div className={styles.country} data-testid="exchange-country">
+          {exchange.country}
+        </div>
       </td>
       <td className={`${styles.td} ${styles.full}`}>
         <ExternalLink
