@@ -17,10 +17,11 @@ interface ExchangesListItemProps {
 export const ExchangesListItem: FC<ExchangesListItemProps> = ({ exchange }) => {
   const router = useRouter()
 
-  const readableUrl = useMemo(
-    () => new URL(exchange.url).host.toString().replace('www.', ''),
-    [exchange.url],
-  )
+  const readableUrl = useMemo(() => {
+    return exchange.url.startsWith('http')
+      ? new URL(exchange.url).host.toString().replace('www.', '')
+      : exchange.url
+  }, [exchange.url])
 
   const stopPropagation = (event: React.MouseEvent<HTMLElement>) => {
     event.stopPropagation()

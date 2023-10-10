@@ -17,7 +17,6 @@ interface SocialLinksProps {
 }
 
 export const SocialLinks: FC<SocialLinksProps> = ({ exchange }) => {
-  console.log('exchange', exchange)
   const links = [
     {
       logo: <UilFacebookF size="16" color="inherit" />,

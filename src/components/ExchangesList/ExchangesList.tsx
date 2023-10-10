@@ -1,4 +1,6 @@
-import { use } from 'react'
+'use client'
+
+import { use, FC } from 'react'
 
 import { ErrorMessage } from '@/components/ErrorMessage/ErrorMessage'
 import { getExchangesList } from '@/services/CoingeckoService/CoingeckoService'
@@ -7,13 +9,15 @@ import { ExchangeListItem } from '@/services/CoingeckoService/CoingeckoService.t
 import styles from './ExchangesList.module.css'
 import { ExchangesListItem } from './ExchangesListItem'
 
-export const ExchangesList = () => {
-  const exchanges: ExchangeListItem[] | null = use(
-    getExchangesList({
-      page: '1',
-      per_page: '10',
-    }),
-  )
+interface ExchangesListProps {
+  query: {
+    page: string
+    per_page: string
+  }
+}
+
+export const ExchangesList: FC<ExchangesListProps> = ({ query }) => {
+  const exchanges: ExchangeListItem[] | null = use(getExchangesList(query))
 
   if (!exchanges) {
     return <ErrorMessage />

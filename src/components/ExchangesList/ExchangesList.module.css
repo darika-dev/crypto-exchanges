@@ -2,6 +2,10 @@
   margin-inline: -1em;
 }
 
+.container {
+  min-height: 515px;
+}
+
 .table {
   width: 100%;
 }
@@ -66,6 +70,10 @@
 
   .td:last-child {
     padding-right: 1rem;
+  }
+
+  .container {
+    min-height: 540px;
   }
 }
 
